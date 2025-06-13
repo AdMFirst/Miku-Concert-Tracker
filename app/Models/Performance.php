@@ -7,8 +7,8 @@ use CodeIgniter\Model;
 class Performance extends Model
 {
     protected $table            = 'performances';
-    protected $primaryKey       = ['concert_id', 'song_id'];
-    protected $useAutoIncrement = false;
+    protected $primaryKey       = 'id';
+    protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;

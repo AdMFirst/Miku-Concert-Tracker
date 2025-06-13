@@ -26,11 +26,11 @@ class Contribute extends Controller
         switch ($type) {
             case 'concert':
                 $model = model(Concert::class);
-                $data = $this->request->getPost(['name', 'location', 'date']);
+                $data = $this->request->getPost(['name', 'location', 'date', 'other_details']);
                 break;
             case 'song':
                 $model = model(Song::class);
-                $data = $this->request->getPost(['title', 'writer']);
+                $data = $this->request->getPost(['title', 'writer', 'composer', 'duration', 'notes']);
                 break;
             case 'performance':
                 $model = model(Performance::class);
