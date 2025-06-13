@@ -4,9 +4,9 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Perfomance extends Model
+class Performance extends Model
 {
-    protected $table            = 'perfomances';
+    protected $table            = 'performances';
     protected $primaryKey       = ['concert_id', 'song_id'];
     protected $useAutoIncrement = false;
     protected $returnType       = 'array';

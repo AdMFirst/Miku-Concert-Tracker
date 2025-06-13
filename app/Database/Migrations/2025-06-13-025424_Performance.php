@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Perfomance extends Migration
+class Performance extends Migration
 {
     public function up()
     {
@@ -21,7 +21,7 @@ class Perfomance extends Migration
 
     public function down()
     {
-        $this->forge->dropTable('perfomances');
+        $this->forge->dropTable('performances');
         
     }
 }
