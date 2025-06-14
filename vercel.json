@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "framework": null,
+  "functions": {
+    "api/**/*.php": {
+      "runtime": "vercel-php@0.7.3"
+    }
+  },
+  "outputDirectory": "public",
+  "routes": [
+    {
+      "src": "/assets/(css|favicon|images|js)/(.*)",
+      "dest": "public/assets/$1/$2"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.php?/$1"
+    }
+  ]
+}
