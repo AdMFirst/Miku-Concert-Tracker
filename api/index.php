@@ -49,6 +49,13 @@ if (getcwd() . DIRECTORY_SEPARATOR !== FCPATH) {
  * and fires up an environment-specific bootstrapping.
  */
 
+// Make the cache folder
+$cachePath = '/tmp/cache';
+if (!is_dir($cachePath)) {
+    mkdir($cachePath, 0755, true);
+}
+define('WRITEPATH', '/tmp/');
+
 // LOAD OUR PATHS CONFIG FILE
 // This is the line that might need to be changed, depending on your folder structure.
 require FCPATH . '../app/Config/Paths.php';
