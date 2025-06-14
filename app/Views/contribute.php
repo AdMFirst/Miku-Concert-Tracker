@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contribute</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
     <style>
         :root {
             --miku: #39C5BB;
@@ -117,7 +119,7 @@
         <!-- Concerts Section -->
         <div class="section">
             <h2>Concerts</h2>
-            <table class="table table-bordered">
+            <table id="concertsTable" class="display">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -175,7 +177,7 @@
         <!-- Songs Section -->
         <div class="section">
             <h2>Songs</h2>
-            <table class="table table-bordered">
+            <table id="songsTable" class="display">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -239,7 +241,7 @@
         <!-- Performances Section -->
         <div class="section">
             <h2>Performances</h2>
-            <table class="table table-bordered">
+            <table id="performancesTable" class="display">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -307,6 +309,33 @@
 
     <script>
         $(document).ready(function() {
+            // Initialize DataTables for each table
+            $(document).ready(function() {
+                $('#concertsTable').DataTable({
+                    paging: true,
+                    searching: true,
+                    ordering: true,
+                    info: true,
+                    lengthChange: true
+                });
+
+                $('#songsTable').DataTable({
+                    paging: true,
+                    searching: true,
+                    ordering: true,
+                    info: true,
+                    lengthChange: true
+                });
+
+                $('#performancesTable').DataTable({
+                    paging: true,
+                    searching: true,
+                    ordering: true,
+                    info: true,
+                    lengthChange: true
+                });
+            });
+
             // Handle form submissions
             $('#concert-form').submit(function(e) {
                 e.preventDefault();
