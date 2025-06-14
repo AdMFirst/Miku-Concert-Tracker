@@ -12,7 +12,7 @@ class Performance extends Migration
             'id' => ['type' => 'INT', 'auto_increment' => true],
             'concert_id' => ['type' => 'INT'],
             'song_id' => ['type' => 'INT'],
-            'order' => ['type' => 'INT', 'null' => true],
+            'order' => ['type' => 'INT'],
         ]);
         $this->forge->addKey('id', true);
         $this->forge->addUniqueKey(['concert_id', 'song_id']);

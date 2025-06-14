@@ -186,19 +186,19 @@ A simple web application to track Hatsune Miku concerts, songs, and performances
 
 -   **Concerts**:
     -   `id`: `INT IDENTITY(1,1)` primary key (auto-incrementing).
-    -   `name`, `location`: `NVARCHAR(255)` (required, Unicode support).
-    -   `date`: `DATE` (required).
-    -   `other_details`: `NVARCHAR(MAX)` (optional).
+    -   `name`, `location`: `NVARCHAR(255)` .
+    -   `date`: `DATE` .
+    -   `other_details`: `NVARCHAR(MAX)` .
 -   **Songs**:
     -   `id`: `INT IDENTITY(1,1)` primary key.
-    -   `title`: `NVARCHAR(255)` (required).
-    -   `writer`, `composer`: `NVARCHAR(255)` (optional).
-    -   `duration`: `TIME` (optional, stores `HH:MM:SS`).
-    -   `notes`: `NVARCHAR(MAX)` (optional).
+    -   `title`: `NVARCHAR(255)` .
+    -   `writer`, `composer`: `NVARCHAR(255)` .
+    -   `duration`: `TIME` (stores `HH:MM:SS`).
+    -   `notes`: `NVARCHAR(MAX)` .
 -   **Performances**:
     -   `id`: `INT IDENTITY(1,1)` primary key.
     -   `concert_id`, `song_id`: `INT` foreign keys with `ON DELETE CASCADE`.
-    -   `order`: `INT` (optional).
+    -   `order`: `INT` .
 -   **Relationships**:
     -   A performance links one concert to one song via `concert_id` and `song_id`.
     -   `ON DELETE CASCADE` ensures deleting a concert or song removes related performances.
