@@ -29,6 +29,9 @@ if (version_compare(PHP_VERSION, $minPhpVersion, '<')) {
  *---------------------------------------------------------------
  */
 
+$system_path = '../system';
+$app_path = '../app';
+
 // Path to the front controller (this file)
 define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR);
 
